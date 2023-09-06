@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contactos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+}
+.header h1 {
+  font-size: 40px;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+.navbar a.right {
+  float: right;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.row {  
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+}
+.side {
+  -ms-flex: 30%; 
+  flex: 30%;
+  background-color: #ffffff;
+  padding: 20px;
+}
+.main {   
+  -ms-flex: 60%; 
+  flex: 60%;
+  background-color: #ffffffe8;
+  padding: 20px;
+}
+.fakeimg {
+  background-color: #ffffffe8;
+  width: 100%;
+  padding: 20px;
+}
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #333;
+}
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>Contactos</h1>
+  </div>
+
+  <div class="navbar">
+    <a href="./index.html">Inicio</a>
+    <a href="./resumen.html">Experiencia</a>
+    <a href="./contactos.html">Contactos</a>
+  </div>
+
+  <div class="row">
+    <div class="side">
+      <img src="IMG_1123.jpg" width="432" height="800">
+    </div>
+    <div class="main">
+      <div class="w3-row-padding">
+        <div class="w3-third w3-container w3-margin-bottom">
+          <img src="phone.png" alt="Norway" width="200" height="180">
+          <div class="w3-container w3-white">
+            <p><b>Celular</b></p>
+            <p>949-234475</p>
+          </div>
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom">
+          <img src="glogo.png" alt="Norway" width="230" height="180">
+          <div class="w3-container w3-white">
+            <p><b>Correo</b></p>
+            <p>isabelchacma@hotmail.com</p>
+          </div>
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom">
+          <img src="linkedin.jpg" alt="Norway" width="300" height="250">
+          <div class="w3-container w3-white">
+            <p><b>LinkedIn</b></p>
+            <p class="com"><a href="https://pe.linkedin.com/in/isabel-chacma-5b505121" target="_blank">Pagina de LinkedIn</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h2></h2>
+  </div>
+</body>
+</html>

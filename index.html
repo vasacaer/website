@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+    .header {
+            padding: 80px;
+            text-align: center;
+            background: #ffffff;
+            color: rgb(10, 8, 7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .header h1 {
+            font-size: 40px;
+            margin-right: 20px;
+        }
+
+        .header img {
+            max-width: 100%;
+            height: auto;
+        }
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+}
+.navbar a.right {
+  float: right;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.row {  
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+}
+.side {
+  -ms-flex: 30%; 
+  flex: 30%;
+  background-color: #f5feffe8;
+  padding: 20px;
+}
+.main {   
+  -ms-flex: 70%; 
+  flex: 70%;
+  background-color: #ffffff8a;
+  padding: 20px;
+}
+.fakeimg {
+  background-color: #fffbfbb9;
+  width: 100%;
+  padding: 20px;
+}
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #333;
+  color: white;
+}
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+    .container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; 
+    }
+
+    
+    .main {
+      flex: 1;
+      
+    }
+
+    .slideshow-container {
+  max-width: 9000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+  </style>
+<body>
+  <div class="container"> 
+    <div class="header">
+      <h1>VirtualConsultConnect</h1>
+      <img src="./logo.png" alt="Company Logo" width="300" height="200">
+    </div>
+
+    <div class="navbar">
+      <a href="./index.html">Inicio</a>
+      <a href="./resumen.html">Experiencia</a>
+      <a href="./contactos.html">Contactos</a>
+    </div>
+
+    <div class="row">
+      <div class="side">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="presentacion.png" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="conferencia.png" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="uni.png" style="width:100%">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+           
+    
+      </div>
+
+      <div class="main">
+        <h2>Isabel Chacma</h2>
+        <p>Isabel Chacma es una dedicada educadora con formación en Ciencias Biológicas y Educación. Posee un Doctorado en Ciencias Biológicas de la UNALM y una Maestría en Genética de la misma institución. Con una pasión por la enseñanza y una sólida base en la investigación, combina su experiencia para crear experiencias de aprendizaje atractivas y efectivas.</p>
+        <p>Como Educadora Certificada de National Geographic, Isabel ha sido reconocida por su compromiso con la educación ambiental. Es miembro de la Red Internacional del Clima recomendada por las Naciones Unidas debido a sus contribuciones a la educación sobre el cambio climático. Con un enfoque en la innovación, diseña e implementa proyectos educativos que integran la tecnología y fomentan la creatividad.</p>
+      </div>
+   
+    </div>
+
+  <div class="footer">
+    <p>&copy; 2023 VirtualConsultConnect. All rights reserved.</p>
+  </div>
+
+  <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+  </script>
+</body>
+
+</html>
